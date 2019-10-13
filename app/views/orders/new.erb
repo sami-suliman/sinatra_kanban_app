@@ -1,0 +1,21 @@
+<center><h1>NEW ORDER</h1></center>
+
+<form action="/orders" method= "POST">
+    <p>
+    <label for="user_id"> User:</label>
+    <input type="text" name="user_id" >
+    <label for="location"> Location:</label>
+    <input type="text" name="location" >
+    <input type="hidden" name="order_date" value= "<%= DateTime.now %>" >
+    <label for="part_number"> Part Number:</label>
+    <input type="text" name="part_number" >
+    <label for="qty"> Qty:</label>
+    <input type="text" name="qty" >
+    </p>
+    <p>
+    <center><input type="submit" ></center>
+    </p>
+</form>
+
+
+ 

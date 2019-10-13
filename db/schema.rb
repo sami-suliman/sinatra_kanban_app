@@ -11,12 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191007011549) do
+ActiveRecord::Schema.define(version: 20191012012210) do
 
   create_table "orders", force: :cascade do |t|
     t.datetime "order_date"
     t.integer  "part_id"
     t.integer  "user_id"
+    t.integer  "qty"
+    t.boolean  "picked",      default: false
+    t.integer  "part_number"
+    t.string   "location"
   end
 
   create_table "parts", force: :cascade do |t|

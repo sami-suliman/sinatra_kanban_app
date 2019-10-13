@@ -1,4 +1,4 @@
 class Order < ActiveRecord::Base
-    has_many :parts
-    has_many :users
-end
+    belongs_to :part
+    belongs_to :user
+  end

@@ -1,0 +1,27 @@
+<center><h1>EDIT ORDER</h1></center>
+<form action="/orders/<%=@order.id%>" method= "POST">
+    <input type="hidden" name="_method" value="patch">
+    <p>
+    <label for="order_date"> Date:</label>
+    <input type="text" value= "<%= @order.order_date%>" name="order[order_date]" >
+    </p>
+    <p>
+    <label for="location"> Location:</label>
+    <input type="text" value= "<%= @order.location%>" name="order[location]" >
+    </p>
+    <p>
+    <label for="part_number"> Part Number:</label>
+    <input type="text" value= "<%= @order.part_number%>" name="order[part_number]" >
+    </p>
+    <p>
+    <label for="qty"> Qty:</label>
+    <input type="text" value= "<%= @order.qty%>" name="order[qty]" >
+    </p>
+    <p>
+    <label for="picked"> Picked?:</label>
+    <input type="checkbox" value="true" name="order[picked]"<%= @order.picked ? "checked" : nil %> >
+    </p>
+    <p>
+    <input type="submit" >
+    </p>
+</form>

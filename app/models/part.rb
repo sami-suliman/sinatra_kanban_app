@@ -1,3 +1,4 @@
 class Part < ActiveRecord::Base
-    belongs_to :orders
+    has_many :orders
+    has_many :users, through: :orders
 end

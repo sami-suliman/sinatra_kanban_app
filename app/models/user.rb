@@ -1,3 +1,7 @@
 class User < ActiveRecord::Base
-    belongs_to :orders
+    has_many :orders
+    has_many :parts, through: :orders
+    has_secure_password
+
+    validates :username, uniqueness: true
 end

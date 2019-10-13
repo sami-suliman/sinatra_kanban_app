@@ -1,0 +1,15 @@
+<center><h3>Order Number: <%= @order.id %> </h3></center>
+<h2> Order Date: <%= @order.order_date %> </h2>
+<h2> Location: <%= @order.location %> </h2>
+<h2> Part Number: <%= @order.part_number %> </h2>
+<h2> Quantity: <%= @order.qty %> </h2>
+<h2> Status: <%= @order.picked ? "Picked" : "Not Picked" %> </h2>
+<p>
+<a href="/orders/<%=@order.id%>/edit"><button> Edit </button></a>
+</p>
+<p>
+<form action="/orders/<%=@order.id%>" method= "POST">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Delete">
+</form>
+</p>
